@@ -2,8 +2,8 @@
      JS confirms the browser supports WebAuthn in a secure context. --}}
 <div class="passkeys-login-block">
     <div id="passkeys-login-alert"></div>
-    <button type="button" id="passkeys-login-btn" class="btn btn-default btn-block" style="display:none;">
-        {{ __('Login with a passkey') }}
+    <button type="button" id="passkeys-login-btn" class="btn btn-default passkeys-login-btn-inline" style="display:none;">
+        <i class="glyphicon glyphicon-lock"></i> {{ __('Login with a passkey') }}
     </button>
 
     {{-- Shown only if the admin requires a second factor after a passkey login. --}}

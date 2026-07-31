@@ -10,6 +10,43 @@
     text-align: center;
 }
 
+/* "Login with a passkey" placed inline with the Login / Forgot buttons,
+   pushed to the far right of that row. */
+.passkeys-login-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.passkeys-login-row > * + * {
+    margin-left: 8px;
+}
+
+.passkeys-login-row > .passkeys-login-btn-inline {
+    margin-left: auto;
+}
+
+.btn.passkeys-login-btn-inline {
+    background-color: #f4f6f8;
+    border: 1px solid #c6cfd6;
+    color: #33383e;
+}
+
+.btn.passkeys-login-btn-inline:hover,
+.btn.passkeys-login-btn-inline:focus {
+    background-color: #e7ebef;
+    color: #33383e;
+}
+
+.passkeys-login-btn-inline .glyphicon {
+    margin-right: 4px;
+}
+
+/* Space the intro text away from the page title. */
+.passkeys-intro {
+    margin-top: 15px;
+}
+
 .passkeys-table td {
     vertical-align: middle !important;
 }
@@ -20,6 +57,12 @@
 
 .passkeys-register-form .form-inline .form-control {
     margin-right: 6px;
+}
+
+/* Wide enough that the placeholder is not truncated. */
+#passkeys-register-name {
+    width: 340px;
+    max-width: 100%;
 }
 
 .passkeys-muted {

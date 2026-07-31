@@ -318,6 +318,20 @@
 
         button.style.display = '';
 
+        // Place the passkey button on the same row as the Login / Forgot
+        // buttons, justified to the far right, instead of full-width below the
+        // form. Only passkey-capable browsers reach this code, so the login
+        // page layout is untouched for everyone else.
+        try {
+            var submitBtn = document.querySelector('form button[type="submit"]');
+            if (submitBtn && submitBtn.parentNode) {
+                submitBtn.parentNode.className += ' passkeys-login-row';
+                submitBtn.parentNode.appendChild(button);
+            }
+        } catch (e) {
+            // Fall back to the button's default position below the form.
+        }
+
         button.addEventListener('click', function (e) {
             e.preventDefault();
             hideAlert(alertEl);

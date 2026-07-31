@@ -15,7 +15,7 @@
     <div class="row-container form-container">
         <div class="col-xs-12">
 
-            <p class="block-help">
+            <p class="block-help passkeys-intro">
                 {{ __('Passkeys let you sign in without a password, using your device screen lock (fingerprint, face, PIN), a hardware security key or a password manager.') }}
             </p>
 
