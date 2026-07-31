@@ -3,6 +3,10 @@
 All notable changes to this module are documented here. This project follows
 [Semantic Versioning](https://semver.org).
 
+## 1.0.3
+
+* Login page: the "Login with a passkey" button now lines up with the right edge of the email/password fields instead of the wider button row.
+
 ## 1.0.2
 
 * Hardened the login-button layout so a stale/cached `btn-block` variant can no longer render it full-width, and increased the profile intro spacing.

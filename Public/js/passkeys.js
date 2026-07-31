@@ -322,9 +322,9 @@
         button.className = 'btn btn-default passkeys-login-btn-inline';
 
         // Place the passkey button on the same row as the Login / Forgot
-        // buttons, justified to the far right, instead of full-width below the
-        // form. Only passkey-capable browsers reach this code, so the login
-        // page layout is untouched for everyone else.
+        // buttons, aligned with the right edge of the input fields, instead of
+        // full-width below the form. Only passkey-capable browsers reach this
+        // code, so the login page layout is untouched for everyone else.
         try {
             var submitBtn = document.querySelector('form button[type="submit"]');
             if (submitBtn && submitBtn.parentNode) {
@@ -333,6 +333,32 @@
                     loginRow.className += ' passkeys-login-row';
                 }
                 loginRow.appendChild(button);
+
+                // The Login-button row is wider than the input columns, so a
+                // plain right-align overshoots the inputs. Measure the input's
+                // right edge and pull the button in to line up with it. Runs
+                // again on resize so it stays aligned across breakpoints.
+                var alignButton = function () {
+                    try {
+                        var input = document.querySelector('form input[name="email"]')
+                            || document.querySelector('form input[type="password"]')
+                            || document.querySelector('form .form-control');
+                        if (!input) {
+                            return;
+                        }
+                        button.style.marginRight = '';
+                        var overhang = button.getBoundingClientRect().right - input.getBoundingClientRect().right;
+                        button.style.marginRight = (overhang > 0 ? Math.round(overhang) : 0) + 'px';
+                    } catch (e) {
+                        // Leave the button right-aligned to the row on error.
+                    }
+                };
+                alignButton();
+                if (window.requestAnimationFrame) {
+                    window.requestAnimationFrame(alignButton);
+                }
+                window.addEventListener('resize', alignButton);
+                window.addEventListener('load', alignButton);
             }
         } catch (e) {
             // Fall back to the button's default position below the form.
