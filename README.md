@@ -1,5 +1,7 @@
 # Passkeys for FreeScout
 
+<img src="Public/img/icon.png" alt="Passkeys" width="96" align="right" />
+
 Passwordless sign-in for [FreeScout](https://freescout.net) using **passkeys** (WebAuthn / FIDO2): Touch ID, Face ID, Windows Hello, Android screen lock, hardware security keys (YubiKey etc.) and password managers.
 
 * Users can **register, rename and remove passkeys** from their profile page.

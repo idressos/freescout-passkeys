@@ -3,6 +3,12 @@
 All notable changes to this module are documented here. This project follows
 [Semantic Versioning](https://semver.org).
 
+## 1.0.1
+
+* Added a module icon.
+* Login page: the "Login with a passkey" button now sits on the same row as the Login / Forgot buttons, right-justified and styled, instead of full-width below them.
+* Profile page: added spacing above the intro text and widened the passkey-name field so its placeholder is no longer cut off.
+
 ## 1.0.0
 
 Initial release.
