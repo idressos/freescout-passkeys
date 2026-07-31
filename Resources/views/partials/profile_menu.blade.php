@@ -1,0 +1,1 @@
+<li @if (Route::currentRouteName() == 'passkeys.profile')class="active"@endif><a href="{{ route('passkeys.profile', ['id' => $user->id]) }}"><i class="glyphicon glyphicon-lock"></i> {{ __('Passkeys') }}</a></li>

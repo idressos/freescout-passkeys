@@ -1,0 +1,42 @@
+#passkeys-alert,
+#passkeys-login-alert {
+    display: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.passkeys-login-block {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.passkeys-table td {
+    vertical-align: middle !important;
+}
+
+.passkeys-register-form {
+    margin-top: 20px;
+}
+
+.passkeys-register-form .form-inline .form-control {
+    margin-right: 6px;
+}
+
+.passkeys-muted {
+    color: #8e9ba7;
+    font-size: 12px;
+}
+
+.passkeys-2fa-block {
+    margin-top: 15px;
+}
+
+.passkeys-2fa-block .form-control {
+    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.passkeys-2fa-help {
+    margin-bottom: 10px;
+}
