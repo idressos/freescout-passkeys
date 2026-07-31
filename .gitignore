@@ -1,0 +1,7 @@
+.DS_Store
+Thumbs.db
+*.log
+/node_modules/
+/composer.lock
+# NOTE: do not add "/vendor/" here - on case-insensitive filesystems it also
+# matches the bundled library in Vendor/, excluding it from the repo.

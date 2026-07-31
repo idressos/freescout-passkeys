@@ -1,0 +1,22 @@
+{
+    "name": "Passkeys",
+    "alias": "passkeys",
+    "description": "Passwordless login with passkeys (WebAuthn / FIDO2): Touch ID, Windows Hello, security keys and password managers.",
+    "version": "1.0.0",
+    "detailsUrl": "https://github.com/idressos/freescout-passkeys",
+    "author": "Ioannis Dressos",
+    "authorUrl": "https://github.com/idressos",
+    "requiredAppVersion": "1.8.0",
+    "license": "AGPL-3.0",
+    "keywords": ["passkeys", "webauthn", "fido2", "login", "security", "passwordless"],
+    "active": 0,
+    "order": 0,
+    "providers": [
+        "Modules\\Passkeys\\Providers\\PasskeysServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

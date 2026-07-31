@@ -1,0 +1,27 @@
+{
+    "name": "idressos/freescout-passkeys",
+    "description": "Passwordless login with passkeys (WebAuthn / FIDO2) for FreeScout.",
+    "type": "freescout-module",
+    "license": "AGPL-3.0-or-later",
+    "keywords": ["freescout", "passkeys", "webauthn", "fido2"],
+    "authors": [
+        {
+            "name": "Ioannis Dressos",
+            "email": "idressos@outlook.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Passkeys\\Providers\\PasskeysServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Passkeys\\": ""
+        }
+    }
+}
