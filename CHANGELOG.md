@@ -3,6 +3,12 @@
 All notable changes to this module are documented here. This project follows
 [Semantic Versioning](https://semver.org).
 
+## 1.0.2
+
+* Hardened the login-button layout so a stale/cached `btn-block` variant can no longer render it full-width, and increased the profile intro spacing.
+
+Note: after updating the module, clear FreeScout's cache (`php artisan freescout:clear-cache`) so the new views and assets are served.
+
 ## 1.0.1
 
 * Added a module icon.

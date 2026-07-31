@@ -135,6 +135,13 @@ and, where practical, add a case to a throwaway script mirroring the function.
 
 ## Gotchas
 
+- **Clear FreeScout's cache after ANY change to Blade views or `Public/`
+  assets.** FreeScout caches compiled views and a minified CSS/JS bundle, so a
+  `git pull` alone often keeps serving the old markup/styles (symptom: UI
+  changes "don't apply"). The fix on the server is `php artisan
+  freescout:clear-cache` (add `php artisan view:clear` / `cache:clear` if
+  needed). Asset injection itself uses the documented `stylesheets` /
+  `javascripts` filters — that part is not the problem.
 - The public symlink `public/modules/passkeys` → `Public/` is created by
   FreeScout on activation; asset filters guard with `file_exists()`.
 - `APP_URL` must exactly match the browser address (scheme/host/port) — it is

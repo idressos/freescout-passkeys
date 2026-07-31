@@ -24,6 +24,10 @@
 
 .passkeys-login-row > .passkeys-login-btn-inline {
     margin-left: auto;
+    /* Never stretch: size to content even if a stale "btn-block" lingers. */
+    flex: 0 0 auto;
+    width: auto;
+    display: inline-block;
 }
 
 .btn.passkeys-login-btn-inline {
@@ -44,7 +48,7 @@
 
 /* Space the intro text away from the page title. */
 .passkeys-intro {
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .passkeys-table td {

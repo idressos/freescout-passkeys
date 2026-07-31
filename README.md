@@ -21,6 +21,14 @@ Passwordless sign-in for [FreeScout](https://freescout.net) using **passkeys** (
 
 The database table is created automatically on activation.
 
+### Updating
+
+After replacing the module files with a newer version, clear FreeScout's cache so the updated views and assets are served (otherwise the old ones may linger):
+
+```
+php artisan freescout:clear-cache
+```
+
 ## Usage
 
 **Registering a passkey.** Open your profile (top right menu » Profile) and choose **Passkeys** in the sidebar. Enter an optional name (e.g. "Work laptop") and click **Add passkey**, then follow the browser prompt. Passkeys can be renamed or deleted from the same page at any time.

@@ -317,6 +317,9 @@
         }
 
         button.style.display = '';
+        // Force the intended classes, neutralising any stale/cached markup
+        // (e.g. an old full-width "btn-block" variant).
+        button.className = 'btn btn-default passkeys-login-btn-inline';
 
         // Place the passkey button on the same row as the Login / Forgot
         // buttons, justified to the far right, instead of full-width below the
@@ -325,8 +328,11 @@
         try {
             var submitBtn = document.querySelector('form button[type="submit"]');
             if (submitBtn && submitBtn.parentNode) {
-                submitBtn.parentNode.className += ' passkeys-login-row';
-                submitBtn.parentNode.appendChild(button);
+                var loginRow = submitBtn.parentNode;
+                if (loginRow.className.indexOf('passkeys-login-row') === -1) {
+                    loginRow.className += ' passkeys-login-row';
+                }
+                loginRow.appendChild(button);
             }
         } catch (e) {
             // Fall back to the button's default position below the form.
